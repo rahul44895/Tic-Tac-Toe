@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  /* overflow: hidden; */
+  font-family: "Baloo 2", cursive;
+  user-select: none;
+}
+.gameBoard {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  position: relative;
+}
+.grid {
+  border: 1px solid black;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.content {
+  margin: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.head {
+  font-size: 4vw;
+}
+.grid:hover {
+  background: greenyellow;
+}
+#img {
+  width: 20vw;
+  min-height: 17vh;
+  object-fit: contain;
+}
+#turn {
+  width: 50%;
+}
+.temp {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#resetButton {
+  border: 2px solid greenyellow;
+  padding: 0.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 30%;
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
+}
+#resetButton:hover {
+  background: greenyellow;
+  transform: scale(0.98);
+}
+#line {
+  height: 3px;
+  width: 0vw;
+  background: black;
+  position: absolute;
+  transition: width 0.2s;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+.br-0 {
+  border-right: 0;
+}
+@media only screen and (max-width:800px) {
+  .gameBoard{
+    flex-direction: column;
+  }
+}
